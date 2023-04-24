@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1700px;
+}
+
+header {                   /* 헤더 (로고+내비게이션메뉴+로그인) */
+    width: 100%;
+    height: 90px;         /* 헤더 부분 높이 (아래로 커짐)*/
+    /* background-color: rgb(98, 207, 116); */
+    font-size: 12px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    /* border-bottom: 2px solid #222; */
+
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+#logo > a{
+    display:block;
+    width:300px;
+}
+
+#logo > a > img{
+    width:100%;
+    object-fit:cover;
+}
+
+nav {                  /*내비게이션 메뉴 (예측분석, 커뮤니티,등) */
+   
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    width:100%;
+    margin-left:150px;
+}
+
+#login {              /*로그인 버튼*/
+    
+    display: flex;
+    width: 139px;
+    height: 40px;
+}
+
+#login > a{
+    display:block;
+    width:300px;
+}
+#login > a > img{
+    width:100%;
+    object-fit: cover;
+}
+
+#topMenu {
+    display: flex;
+    grid-gap: 150px;
+    align-items: center;
+    margin-top: 55px;
+}
+#topMenu > li {
+    /* float: left; */
+    position: relative;
+}
+#topMenu > li > a {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    font-weight: 800;
+    text-shadow: 0 1px #fff;
+    /* padding: 40px 55px; */
+    white-space: nowrap;
+}
+#topMenu > li > a > span {
+    font-size: 0.5em;
+}
+#topMenu > li > a:hover {
+    color: #000;
+    text-shadow: 0 -1px #07c;
+}
+#topMenu > li > ul {
+    display: none;
+    position: absolute;
+    min-width: 250px;
+    background-color: #fff;
+    left: -50%;
+    transform: translateX(-20%);
+    top:25px;
+    margin: 0;
+}
+#topMenu > li > ul > li {
+    padding: 10px 10px 10px 30px;
+}
+#topMenu > li > ul > li > a {
+    font-size: 18px;
+    white-space:nowrap;
+    padding: 5px;
+    color: #000;
+    font-weight: bold;
+    display:block;
+}
+#topMenu > li:hover > ul {
+    display: block;
+    z-index: 10;
+}
+#topMenu > li > ul > li > a:hover {
+    color: #f00;
+}
+
+#login_info p
+{
+    position: relative;
+    top: 0px;
+    right: -160px;
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+#login_service p
+{
+    position: relative;
+    top: 28px;
+    right: 60px;
+    float: left;
+    margin-left: 35px;
+    color: #000;
+    font-size: 17px;
+    display: flex;
+    grid-gap: 15px;
+}
+
+
+/*--------------------------------헤더부분 끝--------------------------------- */
+
+#box  /*회원가입 바깥 박스 */
+{  	
+    border: 3px #000;
+	width: 1700px;
+    height: 1370px;
+	border-radius: 20px;
+	background-color: rgb(249 249 249);
+    margin: 32px auto;
+}
+
+#cpgi {
+	position: relative;
+	left: -435px;
+	top: -65px;
+}
+#top_text {
+	margin-top: 100px;
+	margin-left: 150px;
+	text-align: center;
+	font-size: 25px;
+}
+h1 {
+	margin-top: -215px;
+	text-align: center;
+	font-size: 55px;
+}
+
+h2 {
+	text-align: center;
+    line-height: 2;
+    font-size: 25px;
+    color: #000;
+}
+li {
+    list-style-type: none;
+}
+
+input[type="radio"] + label {
+    height: 35px;
+    font-size: 13px;
+    line-height: 34px;
+    margin: 0 2px;
+    padding: 0 5px;
+}
+
+.checkup-list{
+	display:inline-block;
+	margin-left: 35px;
+	border-top:3px solid #a6ace6; /* 문항 윗줄 컬러 */
+	width: 1600px;
+}
+.checkup-list li{
+	/* font-size:0; */
+	padding:15px 20px;
+	border-bottom:1px solid rgb(172, 171, 171);
+}
+.checkup-list li > p{
+	position: relative;
+	top: 35px;
+	left: -5px;
+	width:1000px;  /* 문항 가로 길이 */
+	font-size:18px; /* 질문 글씨 크기 */
+	line-height:10px;
+	/* vertical-align:middle; */
+	/* padding-right: 350px; */
+    /* word-break:keep-all; */
+}
+.checkup-list li > div{
+	display:inline-block;
+	width:1550px;
+	font-size:0;
+	text-align:right;
+	vertical-align:middle;
+}
+.checkup-list li > div input[type="radio"]{
+	width:0;
+	height:0;
+	font-size:0;
+}
+.checkup-list li > div input[type="radio"]:focus + label{
+	outline:2px solid rgb(43, 156, 14); /* 버튼 클릭시 라인 컬러 */
+}
+.checkup-list li > div input[type="radio"] + label{
+	width:auto;
+	/* height:40px; */
+	line-height:39px;
+	font-size:20px; /* 선택 박스 글씨 크기 */
+	font-weight:normal;
+	text-align:center;
+	/* vertical-align:middle; */
+    margin:0px 0px;
+    padding:0px 15px;
+	color:#333;
+	background:#eee; /* 선택 박스 컬러 */
+	border:1px solid #eee; /* 선택 박스 라인 컬러 */
+	border-radius:5px;
+	/* transition:0.3s all;
+	cursor:pointer; */
+}
+.checkup-list li > div input[type="radio"]:checked + label{
+	font-weight:600;
+	color:#228189; /* 클릭 시 바뀌는 글씨 컬러 */
+	background:#fff; /* 클릭 시 바뀌는 박스 컬러 */
+	border:1px solid #228189;
+}
+.checkup-list__title{
+	background:#167216; /* 문항부분 라인 컬러 */
+	/* border-bottom:1px solid #ddd; */
+}
+
+
+.checkup-list__title > p.content__txt{  /* 문항 라인 */
+    width: 100%;
+	font-size:30px;  /* 문항 글씨 크기 */
+	font-weight:600;
+	text-align:center;
+    padding: 10px;
+	color:rgb(0, 0, 0);
+}
+
+input[type="submit"]
+{
+    font-size: 35px;
+	color: rgb(255, 255, 255);
+    background-color: #167216;
+    border-color: #cbcecc;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+	width: 200px;
+}
+
+.txt_white {              /* 글쓰기 */
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+#popup_open_btn
+{
+                   /* -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+               -webkit-box-shadow: inset 0px 1px 0px 0px #ea4d10;
+               box-shadow: inset 0px 1px 0px 0px #EA4D29;
+               background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ea4d10), color-stop(1, #ea4d10) );
+               background: -moz-linear-gradient( center top, #fff 5%, #fff 100% );
+               filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#fff'); */
+               background-color: #167216;
+-webkit-border-top-left-radius: 3px;
+-moz-border-radius-topleft: 3px;
+border-top-left-radius: 3px;
+-webkit-border-top-right-radius: 3px;
+-moz-border-radius-topright: 3px;
+border-top-right-radius: 3px;
+-webkit-border-bottom-right-radius: 3px;
+-moz-border-radius-bottomright: 3px;
+border-bottom-right-radius: 3px;
+-webkit-border-bottom-left-radius: 3px;
+-moz-border-radius-bottomleft: 3px;
+border-bottom-left-radius: 3px;
+text-indent: 0;
+border-color: #ffffff;
+display: inline-block;
+     margin-top: 30px;         
+     margin-left: 760px;
+     padding: 15px;
+     width: 200px;
+     border-radius: 15px;
+}
+
+input[type="button"]
+{
+	font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    background-color: #167216;
+    border-color: #ffffff;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 760px;
+    padding: 15px;
+    width: 200px;
+    height: 80px;
+    border-radius: 15px;
+}
+
+#my_modal h1{
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 35px;
+    display: block;
+    margin-top: 10px;
+}
+
+#modal_box{
+	
+	color: black;
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/좌절.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    border-color: hsl(0, 4%, 89%);
+    /* margin: 50px auto; */
+    margin-top: 20px;
+    /* margin-bottom: 70px; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#modal_box2{
+	
+    color: black;
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/건강.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    border-color: hsl(0, 4%, 89%);
+    /* margin: 50px auto; */
+    margin-top: 20px;
+    /* margin-bottom: 70px; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#modal_box3{
+	
+    color: black;
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/주의.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    border-color: hsl(0, 4%, 89%);
+    /* margin: 50px auto; */
+    margin-top: 20px;
+    /* margin-bottom: 70px; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#modal_box h2
+{
+	color:black;
+}
+
+#modal_box2 .h2
+{
+	color:black;
+}
+
+#my_modal {
+    display: none;
+    width: 700px;
+    height: 500px;
+    padding: 20px 60px;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 3px;
+}
+
+#my_modal .modal_close_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.c1 {
+color: red;
+font-weight: bold;
+}	
+
+#center
+{
+	font-size: 25px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    /* margin-bottom: 10px; */
+    margin-top: 20px;
+  
+}
+
+/*------------------------------------풋터--------------------------------------*/
+
+#company {
+    clear: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+footer {
+    margin-top: 15px;
+    width: 100%;
+    height: 100px;
+    /* background-color: rgb(221, 220, 220); */
+    border-top: 1px solid #222;
+}
+#bottomMenu {
+    width: 100%;
+    height: 20px;
+}
+#bottomMenu ul {
+    margin-top: 15px;
+}
+#bottomMenu ul li {
+    float: left;
+    padding: 5px 20px;
+    border-right: 1px solid #ddd;
+}
+#bottomMenu ul li:last-child {
+    border-right: none;
+}
+#bottomMenu ul li a, #bottomMenu ul li a:visited {
+    font-size: 15px;
+    color: #666;
+}

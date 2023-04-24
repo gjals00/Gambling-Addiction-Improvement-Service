@@ -1,0 +1,596 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1700px;
+}
+
+header {                   /* 헤더 (로고+내비게이션메뉴+로그인) */
+    width: 100%;
+    height: 90px;         /* 헤더 부분 높이 (아래로 커짐)*/
+    /* background-color: rgb(98, 207, 116); */
+    font-size: 12px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    /* border-bottom: 2px solid #222; */
+
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+#logo > a{
+    display:block;
+    width:300px;
+}
+
+#logo > a > img{
+    width:100%;
+    object-fit:cover;
+}
+
+nav {                  /*내비게이션 메뉴 (예측분석, 커뮤니티,등) */
+   
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    width:100%;
+    margin-left:150px;
+}
+
+#login {              /*로그인 버튼*/
+    
+    display: flex;
+    width: 139px;
+    height: 40px;
+}
+
+#login > a{
+    display:block;
+    width:300px;
+}
+#login > a > img{
+    width:100%;
+    object-fit: cover;
+}
+
+#topMenu {
+    display: flex;
+    grid-gap: 150px;
+    align-items: center;
+    margin-top: 55px;
+}
+#topMenu > li {
+    /* float: left; */
+    position: relative;
+}
+#topMenu > li > a {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    font-weight: 800;
+    text-shadow: 0 1px #fff;
+    /* padding: 40px 55px; */
+    white-space: nowrap;
+}
+#topMenu > li > a > span {
+    font-size: 0.5em;
+}
+#topMenu > li > a:hover {
+    color: #000;
+    text-shadow: 0 -1px #07c;
+}
+#topMenu > li > ul {
+    display: none;
+    position: absolute;
+    min-width: 250px;
+    background-color: #fff;
+    left: -50%;
+    transform: translateX(-20%);
+    top:25px;
+    margin: 0;
+}
+#topMenu > li > ul > li {
+    padding: 10px 10px 10px 30px;
+}
+#topMenu > li > ul > li > a {
+    font-size: 18px;
+    white-space:nowrap;
+    padding: 5px;
+    color: #000;
+    font-weight: bold;
+    display:block;
+}
+#topMenu > li:hover > ul {
+    display: block;
+    z-index: 10;
+}
+#topMenu > li > ul > li > a:hover {
+    color: #f00;
+}
+
+#login_info p
+{
+    position: relative;
+    top: 0px;
+    right: -160px;
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+#login_service p
+{
+    position: relative;
+    top: 28px;
+    right: 60px;
+    float: left;
+    margin-left: 35px;
+    color: #000;
+    font-size: 17px;
+    display: flex;
+    grid-gap: 15px;
+}
+
+/*--------------------------------헤더부분 끝--------------------------------- */
+
+
+h1{
+	font-size: 50px;
+}
+
+#box h1 {
+	
+    font-size: 45px;
+    color: rgb(24 8 8);
+    margin-left: -930px;
+    margin-top: 100px;
+}
+#box {
+    clear: both;
+    width: 100%;
+    height: 680px;
+    background-image: url(../images/예측3.png);
+    background-size: cover;
+    border-radius: 10px;
+    border-color: hsl(0, 0%, 100%);
+    margin: 61px auto;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+#text1 {
+    font-size: 45px;
+    border-bottom: 1px solid #000;
+    margin-left: -20px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+#text2 {
+    position: relative;
+    margin-left: 100px;
+    margin-top: -50px;
+    line-height: 100px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+#text2 label {
+    font-size: 50px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    margin: 20px;
+}
+
+#text2 input[type="checkbox"] {
+
+    width: 30px; 
+    height: 30px; 
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#text2 input[type="date"] {
+    font-size: 50px;
+}
+
+input[type="submit"] {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #fff;
+    margin-right: 20px;
+    border-radius: 30px;
+    border-color: hsl(0, 4%, 89%);
+    background-color: rgb(52, 29, 182);
+    
+}
+input[type="reset"] {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #fff;
+    border-radius: 30px;
+    border-color: hsl(0, 4%, 89%);
+    background-color: #f00;
+}
+#button {
+    position: relative;
+    left: 1150px;
+}
+
+
+#mainMenu{
+    width:100%;
+    height:auto;
+    margin-bottom:50px;
+}
+#mainMenu > h3{
+    font-size:25px;
+    padding-bottom:15px;
+    border-bottom:1px solid #d9d9d9;
+    text-align: center;
+}
+
+
+.info{
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
+}
+
+.info > label{
+    display:flex;
+    align-items:center;
+    grid-gap:10px;
+}
+
+#form > ul input[type=checkbox]{
+    width:15px;
+    height:15px;
+}
+
+input[type="date"]{
+    font-size:15px !important;
+}
+
+#button{
+    margin:40px auto;
+    width:700px;
+    left: 170px;
+    display:flex;
+    justify-content: flex-end;
+}
+
+#button > a > input {
+    width:120px;
+    height:40px;
+    font-size:18px;
+    border-radius:5px !important;
+    border:0px;
+}
+
+#predict
+{
+	font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 20px;
+    margin-top: -350px;
+    margin-left: 450px;
+    letter-spacing: 3px;
+    line-height: 40px;
+    /* text-align: center; */
+    /* border: 1px; */
+    background-color: #efefef;
+    border: 1px solid #f9f9f9;
+    width: 930px;
+}
+/*------------------------------------풋터--------------------------------------*/
+#company {
+    clear: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+#bottomMenu {
+    width: 100%;
+    height: 20px;
+}
+#bottomMenu ul {
+    margin-top: 15px;
+}
+#bottomMenu ul li {
+    float: left;
+    padding: 5px 20px;
+    border-right: 1px solid #ddd;
+}
+#bottomMenu ul li:last-child {
+    border-right: none;
+}
+#bottomMenu ul li a, #bottomMenu ul li a:visited {
+    font-size: 15px;
+    color: #666;
+}
+
+
+#middleMenu1 {
+    float: left;
+    width: 1100px;
+    height: 100%;
+    background-image: url(../images/middleMenu1.png);
+    background-size: 100% 100%;
+    border-radius: 30px;
+    border-color: hsl(0, 4%, 89%);
+    border-style: solid;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    line-height: 200px;
+    color: rgb(3, 3, 3);
+}
+h2 {
+    font-size: 35px;
+    text-align: right;
+    line-height: 200px;
+    padding-right: 30px;
+    color: rgb(238, 232, 232);  
+}
+a2:hover {
+    color: #f00;
+    background-color: rgb(255, 255, 255);
+}
+
+#contents2 {
+    width: 100%;
+    height: 500px; 
+}
+
+#tabMenu {
+    float: left;
+    width: 1150px;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: -10px;
+    background-color: rgb(255, 255, 255);
+    /* border-radius: 30px;
+    border-color: hsl(0, 4%, 89%);
+    border-style: solid; */
+    font-size: 10px;
+}
+#tabMenu2 {
+    float: left;
+    width: 650px;
+    height: 100%;
+    background-color: rgb(33, 131, 65);
+    border-color: hsl(0, 4%, 89%);
+    border-style: solid;
+    border-radius: 30px;
+}
+#map {
+    position: absolute;
+    top: 670px;
+    left: 430px;
+}
+h4 {
+    position: relative; z-index: 1;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-left: 110px;
+    color: rgb(255, 255, 255);
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+#tabMenu3 {
+    float: right;
+    width: 450px;
+    height: 100%;
+    background-color: rgb(97, 135, 216);
+    border-color: hsl(0, 4%, 89%);
+    border-style: solid;
+    border-radius: 30px;
+}
+#report {
+    position: absolute;
+    top: 740px;
+    left: 1070px;
+}
+h5 {
+    position: relative; z-index: 1;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: 80px;
+    color: rgb(37, 36, 36);
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+/* #tabMenu2 {
+    float: none;
+    width: 500px;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 400px;
+    background-color: rgb(214, 26, 214);
+    border-radius: 30px;
+    border-color: hsl(0, 4%, 89%);
+    border-style: solid;
+} */
+
+#middleMenu3 {
+    float: right;
+    width: 500px;
+    height: 100%;
+    margin-top: 10px;
+    margin-right: -10px;
+    background-color: #fff;
+    border-radius: 30px;
+    border-color: hsl(0, 4%, 89%);
+    border-style: solid;
+    font-size: 25px;
+}
+#middleMenu3 input[type="radio"] {
+    display: none;
+}
+#middleMenu3 label {
+    display: inline-block;
+    margin: 0 0;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+    border: 1px solid transparent;
+}
+#middleMenu3 label:hover {
+    color: #222;
+    cursor: pointer;
+}
+#middleMenu3 input:checked + label {
+    color: #f00;
+    border: 1px solid #ddd;
+    background-color: #eee;
+}
+.tapContent {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+.tapContent h2 {
+    display: none;
+}
+#board1 ul {
+    list-style: disc;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+#board1 ul li {
+    font-size: 25px;
+    line-height: 2.5;
+}
+#board2 ul {
+    list-style: disc;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+#board2 ul li {
+    font-size: 25px;
+    line-height: 2.5;
+}
+#tab1:checked ~ #board1,
+#tab2:checked ~ #board2 {
+    display: block;
+}
+h3 {
+    border-bottom: 2px solid rgba(197, 196, 196, 0.808);
+}
+
+footer {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    /* background-color: gray; */
+    border-top: 1px solid #222;
+}
+#bottomMenu {
+    width: 100%;
+    height: 20px;
+}
+#bottomMenu ul {
+    margin-top: 15px;
+}
+#bottomMenu ul li {
+    float: left;
+    padding: 5px 20px;
+    border-right: 1px solid #ddd;
+}
+#bottomMenu ul li:last-child {
+    border-right: none;
+}
+#bottomMenu ul li a, #bottomMenu ul li a:visited {
+    font-size: 15px;
+    color: #666;
+}
+#company {
+    clear: left;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+/* p {
+    font-size: 50px;
+    color: #aaa;
+} */
+#footerlogo {
+    float: left;
+    margin-left: 40px;
+    margin-bottom: -300px;
+    width: 80px;
+    height: 10px;
+    background-color: rgb(218, 215, 219);
+    line-height: 100px;
+    padding-left: 20px;
+}
+ol {
+    line-height: 85px;
+    list-style: disc;
+    font-size: 50px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    margin-left: 90px;
+}
+label {
+    font-size: 50px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    margin: 10px;
+}
+
+input[type="checkbox"] {
+
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer;
+}
+
+input[type="date"] {
+    font-size: 50px;
+}
+
+input[type="submit"] {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #fff;
+    margin-right: 20px;
+    border-radius: 30px;
+    border-color: hsl(0, 4%, 89%);
+    background-color: rgb(52, 29, 182);
+    
+}
+input[type="reset"] {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #fff;
+    border-radius: 30px;
+    border-color: hsl(0, 4%, 89%);
+    background-color: #f00;
+}
+
+fieldset {
+    margin-left: 50px;
+}
+.button {
+    position: relative;
+    right:-1170px;
+    bottom: 110px;
+}

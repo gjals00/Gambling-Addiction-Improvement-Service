@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1700px;
+}
+
+header {                   /* 헤더 (로고+내비게이션메뉴+로그인) */
+    width: 100%;
+    height: 90px;         /* 헤더 부분 높이 (아래로 커짐)*/
+    /* background-color: rgb(98, 207, 116); */
+    font-size: 12px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    /* border-bottom: 2px solid #222; */
+
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#logo {                    /*메인 로고 (도박 중독 개선 서비스) */
+    /* float: left ;
+    margin-left: -30px;    /*메인 로고 좌/우 위치 조절 */
+   /* margin-top: -60px;     /*메인 로고 높이 조절 */
+   /* width: 80px;
+    height: 10px;
+    line-height: 100px;
+    padding-left: 20px; */
+}
+
+#logo > a{
+    display:block;
+    width:300px;
+}
+
+#logo > a > img{
+    width:100%;
+    object-fit:cover;
+}
+
+nav {                  /*내비게이션 메뉴 (예측분석, 커뮤니티,등) */
+    /* float: right;
+    width: 1300px;
+    height: 170px; */
+    /* background-color: green;  */
+    /*padding-top: 45px; /* 내비게이션 메뉴 위/아래 위치 조정 */
+
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    width:100%;
+    margin-left:150px;
+}
+
+#login {              /*로그인 버튼*/
+    
+    position: relative;
+    top: 25px;
+    right: -40px;
+}
+
+#login > a{
+    display:block;
+    width:200px;
+}
+#login > a > img{
+    width:100%;
+    object-fit: cover;
+}
+
+#topMenu {
+    height: 100px;
+    display:flex;
+    grid-gap:150px;
+    align-items: center;
+}
+#topMenu > li {
+    /* float: left; */
+    position: relative;
+}
+#topMenu > li > a {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    font-weight: 800;
+    text-shadow: 0 1px #fff;
+    /* padding: 40px 55px; */
+    white-space: nowrap;
+}
+#topMenu > li > a > span {
+    font-size: 0.5em;
+}
+#topMenu > li > a:hover {
+    color: #000;
+    text-shadow: 0 -1px #07c;
+}
+#topMenu > li > ul {
+    display: none;
+    position: absolute;
+    min-width: 250px;
+    background-color: #fff;
+    left: -50%;
+    transform: translateX(-20%);
+    top:25px;
+    margin: 0;
+}
+#topMenu > li > ul > li {
+    padding: 10px 10px 10px 30px;
+}
+#topMenu > li > ul > li > a {
+    font-size: 18px;
+    white-space:nowrap;
+    padding: 5px;
+    color: #000;
+    font-weight: bold;
+    display:block;
+}
+#topMenu > li:hover > ul {
+    display: block;
+    z-index: 10;
+}
+#topMenu > li > ul > li > a:hover {
+    color: #f00;
+}
+/*--------------------------------헤더부분 끝--------------------------------- */
+
+h1{
+	font-size: 50px;
+}
+
+#box  /*회원가입 바깥 박스 */
+{  	
+ 
+    border: 3px #000;
+	width: 100%;
+    height: 1500px;
+	border-radius: 20px;
+	background-color: rgb(249 249 249); 
+    margin: 0px auto;
+}
+
+#signup {   /* 회원가입 입력 박스 */
+	background:#fff;
+	border:1px solid #d3d4d5;
+	border-radius: 5px;
+	padding: auto;
+	width: 800px;
+    height: 1340px;	
+	margin:40px auto;
+    padding-top: 30px;
+}
+
+#signup li
+{
+    position: relative;
+    margin: 10px 130px auto;
+	font-size: 30px;  /* 글자 크기 */
+    padding: auto;
+}
+
+#signup input[type=text], #signup input[type=password], #signup input[type=tel], #signup input[type=email] {  
+    /* 속성 선택자 사용 */
+	position: relative;
+    border: 1px solid #ccc;  /* 텍스트 필드 테두리 지정 */
+	border-radius: 10px;  /* 텍스트 필드 모서리를 둥글게 지정 */
+	font-size: 20px;  /* 텍스트 필드 안의 글자 크기 지정 */
+	padding: 30px 15px;  /* 텍스트 필드와 내용 사이의 패딩 지정 */
+    margin: 10px;    /* 글자와 텍스트 필드 사이 공간 크기 지정 */
+	width: 500px;  /* 텍스트 상자 가로 크기 */
+	height: 60px;  /* 텍스트 상자 세로 크기 */
+}	
+
+input[type="radio"] 
+{
+
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer;
+}
+input[type="checkbox"] 
+{
+
+    width: 25px; 
+    height: 25px; 
+    cursor: pointer;
+}
+
+/* 필수 입력 필드의 스타일 */
+/* #signup input[required] 
+{  
+	border:2px rgb(201, 196, 196) solid;  
+}  */
+
+#signup input[readonly] {  /* 읽기 전용 필드의 스타일 */
+	border:none;
+}
+input #id_check
+{
+    background-color: red;
+} 
+input[type="submit"] 
+{
+    position: relative;
+    left: 130px;
+    bottom: 0px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #fff;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+input[id="id_check"]
+{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    position: relative;
+    left: 535px;
+    top: -69px;
+}
+
+input[id="final"]
+{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    position: relative;
+    left: 140px;
+    top: 10px;
+}
+
+#li2
+{
+    margin-top: -70px;
+}
+
+#checkId
+{
+	font-size: 18px;
+    position: relative;
+    top: -50px;
+}
+
+
+/*------------------------------------풋터--------------------------------------*/
+#company {
+    clear: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+footer {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    /* background-color: rgb(221, 220, 220); */
+    border-top: 1px solid #222;
+}
+#bottomMenu {
+    width: 100%;
+    height: 20px;
+}
+#bottomMenu ul {
+    margin-top: 15px;
+}
+#bottomMenu ul li {
+    float: left;
+    padding: 5px 20px;
+    border-right: 1px solid #ddd;
+}
+#bottomMenu ul li:last-child {
+    border-right: none;
+}
+#bottomMenu ul li a, #bottomMenu ul li a:visited {
+    font-size: 15px;
+    color: #666;
+}

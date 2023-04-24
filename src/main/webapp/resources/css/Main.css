@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1700px;
+}
+
+header {                   /* 헤더 (로고+내비게이션메뉴+로그인) */
+    width: 100%;
+    height: 90px;         /* 헤더 부분 높이 (아래로 커짐)*/
+    /* background-color: rgb(98, 207, 116); */
+    font-size: 12px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    /* border-bottom: 2px solid #222; */
+
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+#logo > a{
+    display:block;
+    width:300px;
+}
+
+#logo > a > img{
+    width:100%;
+    object-fit:cover;
+}
+
+nav {                  /*내비게이션 메뉴 (예측분석, 커뮤니티,등) */
+   
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    width:100%;
+    margin-left:150px;
+}
+
+#login {              /*로그인 버튼*/
+    
+    display: flex;
+    width: 139px;
+    height: 40px;
+}
+
+#login > a{
+    display:block;
+    width:300px;
+}
+#login > a > img{
+    width:100%;
+    object-fit: cover;
+}
+
+#topMenu {
+    display: flex;
+    grid-gap: 150px;
+    align-items: center;
+    margin-top: 55px;
+}
+#topMenu > li {
+    /* float: left; */
+    position: relative;
+}
+#topMenu > li > a {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    font-weight: 800;
+    text-shadow: 0 1px #fff;
+    /* padding: 40px 55px; */
+    white-space: nowrap;
+}
+#topMenu > li > a > span {
+    font-size: 0.5em;
+}
+#topMenu > li > a:hover {
+    color: #000;
+    text-shadow: 0 -1px #07c;
+}
+#topMenu > li > ul {
+    display: none;
+    position: absolute;
+    min-width: 250px;
+    background-color: #fff;
+    left: -50%;
+    transform: translateX(-20%);
+    top:25px;
+    margin: 0;
+}
+#topMenu > li > ul > li {
+    padding: 10px 10px 10px 30px;
+}
+#topMenu > li > ul > li > a {
+    font-size: 18px;
+    white-space:nowrap;
+    padding: 5px;
+    color: #000;
+    font-weight: bold;
+    display:block;
+}
+#topMenu > li:hover > ul {
+    display: block;
+    z-index: 10;
+}
+#topMenu > li > ul > li > a:hover {
+    color: #f00;
+}
+
+#login_info p
+{
+    position: relative;
+    top: 0px;
+    right: -160px;
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+#login_service p
+{
+    position: relative;
+    top: 28px;
+    right: 60px;
+    float: left;
+    margin-left: 35px;
+    color: #000;
+    font-size: 17px;
+    display: flex;
+    grid-gap: 15px;
+}
+
+
+/*--------------------------------헤더부분 끝--------------------------------- */
+
+
+#mainMenu {                   /* 내 또래들은 도박 중독일까? 배너 */
+    margin-top: 10px;
+    clear: both;
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/middleMenu1.png);
+    background-size: 100% 100%;
+    border-radius: 10px;
+    border-color: hsl(0, 0%, 96%);
+    border-style: solid;
+    overflow: hidden;
+}
+/* #mainMenu {
+    clear: both;
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/middleMenu1.png);
+    background-size: cover;
+    border-radius: 10px;
+    border-color: hsl(0, 0%, 0%);
+    margin: 61px auto;
+    background-position:center;
+    background-repeat: no-repeat;
+} */
+/* button {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    border: none;
+    padding: 20px;
+    background-color: transparent;
+    color: #000;
+    font-weight: 800;
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+button:hover {
+    background-color: #222;
+    color: #fff;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#prev {
+    left: 0;
+}
+#next {
+    right: 0;
+} */
+
+h1 {                              /* 메인배너 글씨 */
+    /* font-family: 'East Sea Dokdo', cursive; */
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 60px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 200px;
+    color: rgb(0, 0, 0);
+}
+
+h6 {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+#slideShow h2 {
+    font-size: 35px;
+    text-align: right;
+    line-height: 200px;
+    padding-right: 30px;
+    padding-top: 70px;
+    color: #e7e7e7;
+}
+
+a2:hover {
+    color: #eed027;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+#contents2 {
+    width: 100%;
+    height: 500px; 
+    display: flex;
+}
+
+#tabMenu {
+    float: left;
+    width: 1150px;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: -10px;
+    background-color: rgb(255, 255, 255);
+    /* border-radius: 30px;
+    border-color: hsl(0, 4%, 89%);
+    border-style: solid; */
+    font-size: 10px;
+}
+#tabMenu2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(33, 131, 65);
+    border-color: hsl(0, 4%, 89%);
+    border-style: solid;
+    border-radius: 10px;
+
+    background-image: url(../images/map.png);
+    background-size: 90% 90%;
+    margin:auto;
+    background-position:center 65px;
+    background-repeat: no-repeat; 
+}
+
+h4 {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 40px;
+    color: rgb(239 237 237);
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+
+#tabMenu3 {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(97, 135, 216);
+    border-color: hsl(0, 4%, 89%);
+    border-style: solid;
+    border-radius: 10px;
+
+    background-image: url(../images/report.png);
+    background-size: 65% 65%;
+    margin:auto;
+    background-position:110px 120px;
+    background-repeat: no-repeat; 
+}
+
+h5 {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 40px;
+    color: rgb(239 237 237);
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+
+
+/* #tabMenu2 {
+    float: none;
+    width: 500px;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 400px;
+    background-color: rgb(214, 26, 214);
+    border-radius: 30px;
+    border-color: hsl(0, 4%, 89%);
+    border-style: solid;
+} */
+
+#middleMenu3 {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid rgb(216, 216, 216); ;
+    font-size: 20px;
+}
+#middleMenu3 input[type="radio"] {
+    display: none;
+}
+#middleMenu3 label {
+    display: inline-block;
+    margin: 0 0;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+    border: 1px solid transparent;
+}
+#middleMenu3 label:hover {
+    color: #222;
+    cursor: pointer;
+}
+#middleMenu3 input:checked + label {
+    color: rgb(55, 57, 197);
+    border: 1px solid rgb(202, 200, 200);
+    background-color: rgb(240, 240, 240);
+}
+.tapContent {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+.tapContent h2 {
+    display: none;
+}
+#board1 ul {
+    list-style: circle;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+#board1 ul li {
+    font-size: 18px;
+    line-height: 2.5;
+}
+#board2 ul {
+    list-style: circle;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+#board2 ul li {
+    font-size: 18px;
+    line-height: 2.5;
+}
+#tab1:checked ~ #board1,
+#tab2:checked ~ #board2 {
+    display: block;
+}
+h3 {
+    border-bottom: 2px solid rgba(197, 196, 196, 0.808);
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.c1
+{
+	color: black;
+    /* font-weight: bold; */
+    font-family: 'IBM Plex Sans KR';
+    /* margin-left: 30px; */
+    float: right;
+    margin-right: 20px;
+}
+
+.c2
+{
+	color: black;
+	font-family: 'IBM Plex Sans KR';
+}
+
+
+/*------------------------------------풋터--------------------------------------*/
+
+#company {
+    clear: left;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+footer {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    /* background-color: gray; */
+    border-top: 1px solid #222;
+}
+#bottomMenu {
+    width: 100%;
+    height: 20px;
+}
+#bottomMenu ul {
+    margin-top: 15px;
+}
+#bottomMenu ul li {
+    float: left;
+    padding: 5px 20px;
+    border-right: 1px solid #ddd;
+}
+#bottomMenu ul li:last-child {
+    border-right: none;
+}
+#bottomMenu ul li a, #bottomMenu ul li a:visited {
+    font-size: 15px;
+    color: #666;
+}
+
+p {
+    font-size: 14px;
+    color: #aaa;
+}
